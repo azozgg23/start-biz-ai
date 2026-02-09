@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لعبة سباق متعددة اللاعبين - أوفلاين</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>سباق مضمار ثنائي - أوفلاين</h1>
+      <p>لا تحتاج إنترنت: العب مع صديقك على نفس الجهاز.</p>
+    </header>
+
+    <section class="hud">
+      <div class="card">
+        <h2>اللاعب 1</h2>
+        <p>الأزرار: W A S D</p>
+        <p>اللفات: <span id="laps-p1">0</span> / <span id="total-laps">3</span></p>
+      </div>
+      <div class="card">
+        <h2>اللاعب 2</h2>
+        <p>الأزرار: ↑ ↓ ← →</p>
+        <p>اللفات: <span id="laps-p2">0</span> / <span id="total-laps-2">3</span></p>
+      </div>
+      <div class="card status">
+        <h2>الحالة</h2>
+        <p id="status-text">اضغط ابدأ للانطلاق!</p>
+        <div class="actions">
+          <button id="start-btn">ابدأ</button>
+          <button id="reset-btn" class="ghost">إعادة</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="game-area">
+      <canvas id="game" width="900" height="520" aria-label="مضمار السباق"></canvas>
+      <div class="legend">
+        <span class="dot p1"></span> اللاعب 1
+        <span class="dot p2"></span> اللاعب 2
+        <span class="dot track"></span> حدود المضمار
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
